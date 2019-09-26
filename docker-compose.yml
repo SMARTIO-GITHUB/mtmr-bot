@@ -17,11 +17,11 @@ services:
             - ./mysql/init/:/docker-entrypoint-initdb.d
 
     api:
-        build: ./api
+        build: ./bot-api
         ports:
             - 8888:8888
         volumes:
-            - ./api:/go/src/api
+            - ./bot-api:/go/src/bot-api
         depends_on:
             - 'mysql'
 
