@@ -11,8 +11,8 @@ ENV TZ JST-9
 ENV TERM xterm
 
 RUN mkdir src
-COPY src src/
-WORKDIR ./src/
+COPY src /src/
+WORKDIR /src
 
 RUN apt-get install -y vim less
 RUN pip install --upgrade pip
